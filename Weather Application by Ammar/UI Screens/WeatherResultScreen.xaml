@@ -1,0 +1,53 @@
+﻿<Page
+    x:Class="Weather_Application_by_Ammar.UI_Screens.WeatherResultScreen"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Weather_Application_by_Ammar.UI_Screens"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.PrimaryCommands>
+                <AppBarButton Name="btnBack" Click="btnBack_Click" 
+                              Content="Back" Icon="Back"/>
+                <AppBarButton Name="btnExit" Click="btnExit_Click"
+                              Content="Exit" Icon="Cancel"/>
+            </CommandBar.PrimaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="Fill"  Opacity="0.9"
+                        ImageSource="/Assets/Images/weather-live-hd-wallpapers.jpg" />
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="1.2*" ></RowDefinition>
+            <RowDefinition Height="1.2*" ></RowDefinition>
+            <RowDefinition Height="1.2*" ></RowDefinition>
+            <RowDefinition Height="1.2*" ></RowDefinition>
+            <RowDefinition Height="1.2*" ></RowDefinition>
+            <RowDefinition Height="2*" ></RowDefinition>
+            <RowDefinition Height="0.5*" ></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*" ></ColumnDefinition>
+            <ColumnDefinition Width="5*" ></ColumnDefinition>
+            <ColumnDefinition Width="10*" ></ColumnDefinition>
+            <ColumnDefinition Width="0.5*" ></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="1" Grid.ColumnSpan="3" Name="lblWeatherResults"
+                   Text="" FontSize="25" Foreground="White" TextWrapping="Wrap"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Grid.Row="2" Grid.ColumnSpan="3" Name="lblCountryCityName"
+                   Text="Country , City" FontSize="25" Foreground="White"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Grid.Row="3" Grid.ColumnSpan="3" Name="lblTemprature"
+                   Text="Temprature" FontSize="25" Foreground="White"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Grid.Row="4" Grid.ColumnSpan="3" Name="lblTempratureMaxMin"
+                   Text="Temprature Max Min " FontSize="25" Foreground="White"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    </Grid>
+</Page>

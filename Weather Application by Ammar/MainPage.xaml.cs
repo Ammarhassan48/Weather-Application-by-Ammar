@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Weather_Application_by_Ammar.UI_Screens;
+using Weather_Application_by_Ammar.User_Classes;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -25,6 +27,17 @@ namespace Weather_Application_by_Ammar
         public MainPage()
         {
             this.InitializeComponent();
+        }
+
+        private void btnCheckWeather_Click(object sender, RoutedEventArgs e)
+        {
+            // open other page
+            //WeatherResultScreen wrs = new WeatherResultScreen();
+            InputClass cls = new InputClass();
+            cls.CountryName = tbCountryName.Text;
+            cls.CityName = tbCityName.Text;
+
+            this.Frame.Navigate(typeof(WeatherResultScreen),cls);
         }
     }
 }
