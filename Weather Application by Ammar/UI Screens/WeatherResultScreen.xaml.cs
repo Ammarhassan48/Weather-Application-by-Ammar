@@ -44,7 +44,8 @@ namespace Weather_Application_by_Ammar.UI_Screens
 
                 
                 HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get,
-                                "http://api.openweathermap.org/data/2.5/weather?q=" + cityName+"&APPID=40f2119109e348ab1e9fb702ced81160");
+                                "http://api.openweathermap.org/data/2.5/weather?q=" + cityName+ 
+                                "&APPID=40f2119109e348ab1e9fb702ced81160&units=metric");
 
                 #region Solution by Asfend [ Rejected ]
                 //HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get,
